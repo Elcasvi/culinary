@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-background-dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>KulinaryAI – AI-powered cooking assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="KulinaryAI is an AI-powered cooking assistant that creates recipes, grocery lists and nutritional analysis based on your tastes and goals."
+  />
+  <script>
+    tailwind = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#111827",
+            "primary-dark": "#020617",
+            accent: "#FC6600",
+            "background-dark": "#020617",
+            gray: "#6b7280",
+            "gray-light": "#f3f4f6",
+            "text-light": "#111827",
+            "text-dark": "#f9fafb",
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-background-dark text-text-dark">
+<main class="flex flex-col justify-center min-h-screen">
+  <div class="flex-1">
+    <!-- Hero Section -->
+    <div class="w-full flex justify-center bg-gray-light/5">
+      <div class="container mx-auto py-12 md:py-24 lg:py-32 xl:py-48 px-4">
+        <div class="flex flex-col lg:flex-row items-center rounded-lg shadow-2xl p-8 sm:p-10 md:p-12 xl:p-16 gap-10 bg-white/5 backdrop-blur">
+          <!-- Text Content -->
+          <div class="lg:w-1/2 space-y-6">
+              <span class="inline-block px-4 py-1 rounded-full bg-accent/10 text-accent font-medium text-sm">
+                AI-powered cooking platform
+              </span>
+
+            <div class="bg-primary/10 text-accent px-4 py-2 rounded-lg mb-4 inline-block">
+              <span class="font-bold text-xl">Trained on real recipes</span> to help you cook smarter, not harder.
+            </div>
+
+            <h1 class="text-4xl font-extrabold sm:text-5xl md:text-6xl text-text-dark">
+              Cook smarter, eat better with KulinaryAI
+            </h1>
+
+            <p class="text-lg max-w-xl text-text-dark/80">
+              Get personalized recipes, smart grocery lists, and nutritional insights in minutes – based on your tastes,
+              time and health goals.
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#get-started"
+                class="font-bold rounded-full bg-[#FC6600] hover:bg-orange-600 transition-all duration-300 py-3 px-6 text-white text-center"
+              >
+                Start your free trial
+              </a>
+            </div>
+          </div>
+
+          <!-- Illustration / Mockup (hidden on mobile) -->
+          <picture class="hidden md:block lg:w-1/2">
+            <img
+              src="/images/ChillKitchenScene.webp"
+              width="400"
+              loading="lazy"
+              alt="Person cooking in a modern, relaxed kitchen using KulinaryAI"
+              class="rounded-2xl shadow-xl"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unique Value Proposition Section -->
+    <section
+      id="features"
+      class="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-primary to-primary-dark flex justify-center"
+    >
+      <div class="container px-4 md:px-6 mx-auto">
+        <div class="text-center mb-16">
+            <span
+              class="inline-block px-4 py-1 rounded-full bg-accent/30 text-white font-medium text-sm mb-4"
+            >Why KulinaryAI?</span
+            >
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white mb-6">
+            Your personal AI chef & meal planner
+          </h2>
+          <p class="text-xl text-white/80 max-w-3xl mx-auto">
+            KulinaryAI helps you plan your meals, stay on budget, and keep a healthier lifestyle – without spending hours
+            deciding what to cook.
+          </p>
+        </div>
+
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Feature Card 1 - AI Recipe Generation -->
+          <div
+            class="bg-white/5 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-white/10 transform transition-all duration-300 hover:scale-105 hover:bg-white/10"
+          >
+            <div class="flex flex-col items-center mb-6">
+              <div class="bg-accent/70 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4 text-white">
+                📜
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-accent mb-4">AI recipe generation</h3>
+            <p class="text-md mb-6 text-white/90">
+              Tell KulinaryAI what you have in your fridge or what you feel like eating, and get creative, step-by-step
+              recipes instantly.
+            </p>
+            <p class="text-md mb-6 font-semibold text-accent">
+              Trained on diverse cuisines to give you balanced, delicious ideas every day.
+            </p>
+            <div class="flex items-center space-x-2 text-sm">
+              <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded">Personalized</span>
+              <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded">Creative</span>
+              <span class="bg-purple-500/20 text-purple-400 px-2 py-1 rounded">Delicious</span>
+            </div>
+          </div>
+
+          <!-- Feature Card 2 - Lifestyle Labels -->
+          <div
+            class="bg-white/5 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-white/10 transform transition-all duration-300 hover:scale-105 hover:bg-white/10"
+          >
+            <div class="bg-accent/70 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-6 text-white">
+              🥗
+            </div>
+            <h3 class="text-2xl font-bold text-accent mb-4">Lifestyle-aware meals</h3>
+            <p class="text-md mb-6 text-white/90">
+              Filter recipes by your goals: high-protein, vegetarian, low-carb, muscle gain, weight loss and more.
+            </p>
+            <div class="flex flex-row space-x-2 text-2xl">
+              <span class="text-green-400">🌿</span>
+              <span class="text-blue-400">💪</span>
+              <span class="text-red-400">🥩</span>
+            </div>
+          </div>
+
+          <!-- Feature Card 3 - Diverse Cuisines -->
+          <div
+            class="bg-white/5 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-white/10 transform transition-all duration-300 hover:scale-105 hover:bg-white/10"
+          >
+            <div class="bg-accent/70 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-6 text-white text-2xl">
+              🌎
+            </div>
+            <h3 class="text-2xl font-bold text-accent mb-4">Diverse cuisines</h3>
+            <p class="text-md mb-6 text-white/90">
+              Discover flavors from Mexico, France, Spain and more – all adapted to your ingredients and skill level.
+            </p>
+            <div class="flex flex-row space-x-3">
+              <img src="/images/mx.png" alt="Mexican flag" class="h-6 rounded shadow" />
+              <img src="/images/fr.png" alt="French flag" class="h-6 rounded shadow" />
+              <img src="/images/es.png" alt="Spanish flag" class="h-6 rounded shadow" />
+            </div>
+          </div>
+
+          <!-- Feature Card 4 - Food Analysis -->
+          <div
+            class="bg-white/5 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-white/10 transform transition-all duration-300 hover:scale-105 hover:bg-white/10"
+          >
+            <div class="flex flex-col items-center mb-6">
+              <div class="bg-accent/70 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4 text-white text-2xl">
+                ⚡
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-accent mb-4">Nutritional analysis</h3>
+            <p class="text-md mb-6 text-white/90">
+              Understand calories, macros and key nutrients for every recipe so you can stay aligned with your goals.
+            </p>
+            <div class="flex items-center space-x-2 text-sm">
+              <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded">Nutritional</span>
+              <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded">Healthy</span>
+              <span class="bg-purple-500/20 text-purple-400 px-2 py-1 rounded">Informative</span>
+            </div>
+          </div>
+
+          <!-- Feature Card 5 - Monthly Grocery Lists -->
+          <div
+            class="bg-white/5 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-white/10 transform transition-all duration-300 hover:scale-105 hover:bg-white/10"
+          >
+            <div class="flex flex-col items-center mb-6">
+              <div class="bg-accent/70 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4 text-white text-2xl">
+                🛒
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-accent mb-4">Smart grocery lists</h3>
+            <p class="text-md mb-6 text-white/90">
+              Generate weekly or monthly grocery lists automatically from your meal plan – optimized to reduce waste and
+              save money.
+            </p>
+            <div class="flex items-center space-x-2 text-sm">
+              <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded">Organized</span>
+              <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded">Efficient</span>
+              <span class="bg-purple-500/20 text-purple-400 px-2 py-1 rounded">Cost-effective</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature Comparison -->
+        <div class="mt-20 bg-white/5 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-white/10">
+          <h3 class="text-2xl font-bold mb-6 text-center text-white">How KulinaryAI compares</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm md:text-base">
+              <thead>
+              <tr class="border-b border-white/10">
+                <th class="text-left py-4 px-2 text-white/80">Feature</th>
+                <th class="text-center py-4 px-2 text-white/80">KulinaryAI</th>
+                <th class="text-center py-4 px-2 text-white/80">Typical cooking apps</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr class="border-b border-white/10">
+                <td class="py-4 px-2 text-white/80">AI-powered recommendations</td>
+                <td class="text-center py-4 px-2 text-green-400">Yes, personalized to you</td>
+                <td class="text-center py-4 px-2 text-red-400">Limited or none</td>
+              </tr>
+              <tr class="border-b border-white/10">
+                <td class="py-4 px-2 text-white/80">Nutritional analysis</td>
+                <td class="text-center py-4 px-2 text-green-400">Built-in for every recipe</td>
+                <td class="text-center py-4 px-2 text-red-400">Only for some recipes</td>
+              </tr>
+              <tr class="border-b border-white/10">
+                <td class="py-4 px-2 text-white/80">Automatic grocery lists</td>
+                <td class="text-center py-4 px-2 text-green-400">Yes, by week or month</td>
+                <td class="text-center py-4 px-2 text-red-400">Often manual</td>
+              </tr>
+              <tr class="border-b border-white/10">
+                <td class="py-4 px-2 text-white/80">Dietary preferences & goals</td>
+                <td class="text-center py-4 px-2 text-green-400">Fully customizable</td>
+                <td class="text-center py-4 px-2 text-red-400">Basic filters</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-2 text-white/80">Cuisine variety</td>
+                <td class="text-center py-4 px-2 text-green-400">International</td>
+                <td class="text-center py-4 px-2 text-red-400">Limited selection</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="w-full py-16 md:py-24 lg:py-32 flex justify-center bg-gray-light">
+      <div class="container px-4 md:px-6 mx-auto">
+        <div class="text-center mb-16">
+            <span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4"
+            >How it works</span
+            >
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center text-text-light mb-6">
+            From ingredients to plate in three steps
+          </h2>
+          <p class="text-xl text-text-light/80 max-w-3xl mx-auto">
+            KulinaryAI guides you from “I don’t know what to cook” to a complete meal plan with smart grocery lists.
+          </p>
+        </div>
+
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 relative">
+          <!-- Step 1 -->
+          <div class="flex flex-col items-center space-y-6 relative">
+            <div
+              class="bg-primary text-white text-4xl font-bold rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10"
+            >
+              1
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-xl border border-gray-light h-full">
+              <h3 class="text-2xl font-bold mb-4 text-center">Tell us about you</h3>
+              <p class="text-md text-gray-600 text-center mb-6">
+                Set your goals, dietary preferences, and how many meals you want to plan per week.
+              </p>
+              <div class="flex justify-center text-5xl">📝</div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex flex-col items-center space-y-6 relative">
+            <div
+              class="bg-primary text-white text-4xl font-bold rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10"
+            >
+              2
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-xl border border-gray-light h-full">
+              <h3 class="text-2xl font-bold mb-4 text-center">Get AI-generated recipes</h3>
+              <p class="text-md text-text-light/80 text-center mb-6">
+                KulinaryAI suggests balanced, tasty recipes that match your ingredients, tastes and time.
+              </p>
+              <div class="flex flex-col items-center text-5xl">
+                🍲
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex flex-col items-center space-y-6 relative">
+            <div
+              class="bg-primary text-white text-4xl font-bold rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-10"
+            >
+              3
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-xl border border-gray-light h-full">
+              <h3 class="text-2xl font-bold mb-4 text-center">Auto-generated grocery lists</h3>
+              <p class="text-md text-text-light/80 text-center mb-6">
+                Export your shopping list, cook with confidence and track what you’ve already prepared.
+              </p>
+              <div class="flex flex-col items-center text-4xl gap-4">
+                <span>📜</span>
+                <span>🛒</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="w-full py-16 md:py-24 lg:py-32 bg-gray-light flex justify-center">
+      <div class="container px-4 md:px-6 mx-auto">
+        <div class="text-center mb-16">
+            <span
+              class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4"
+            >About the creator</span
+            >
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center text-text-light mb-6">
+            Built by food and technology enthusiasts
+          </h2>
+          <p class="text-xl text-text-light/80 max-w-3xl mx-auto">
+            KulinaryAI is created by a solo developer passionate about cooking, healthy habits and using AI to make daily
+            life easier.
+          </p>
+        </div>
+
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Team Member 1 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden group">
+            <div class="h-64 bg-gray-light relative overflow-hidden">
+              <div
+                class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="text-white text-center p-4">
+                  <p>"I want to remove the stress from cooking so people can actually enjoy the process."</p>
+                </div>
+              </div>
+              <div class="w-full h-full flex items-center justify-center text-6xl text-primary">👨‍💻</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Carlos Sánchez</h3>
+              <p class="text-sm text-gray-500 mb-3">Founder & Full-stack Developer</p>
+              <p class="text-sm text-gray-700">
+                Designs, builds and maintains KulinaryAI, from the AI models to the user experience.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden group">
+            <div class="h-64 bg-gray-light relative overflow-hidden">
+              <div
+                class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="text-white text-center p-4">
+                  <p>"Good food doesn’t have to be complicated. The goal is to make tasty meals accessible."</p>
+                </div>
+              </div>
+              <div class="w-full h-full flex items-center justify-center text-6xl text-primary">👨‍🍳</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Culinary advisor</h3>
+              <p class="text-sm text-gray-500 mb-3">Recipe & flavor consultant</p>
+              <p class="text-sm text-gray-700">
+                Helps validate recipe ideas and improve the balance between taste, simplicity and nutrition.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden group">
+            <div class="h-64 bg-gray-light relative overflow-hidden">
+              <div
+                class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="text-white text-center p-4">
+                  <p>"I love turning user feedback into new features and a smoother experience."</p>
+                </div>
+              </div>
+              <div class="w-full h-full flex items-center justify-center text-6xl text-primary">👨‍💻</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Product & UX</h3>
+              <p class="text-sm text-gray-500 mb-3">User experience & design</p>
+              <p class="text-sm text-gray-700">
+                Focused on making KulinaryAI intuitive, friendly and enjoyable to use every day.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center">
+          <p class="text-lg text-text-light/80 max-w-3xl mx-auto">
+            KulinaryAI is currently in active development. New features and improvements are released frequently based on
+            real user feedback.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faqs" class="w-full py-16 md:py-24 lg:py-32 flex justify-center bg-white">
+      <div class="container px-4 md:px-6 mx-auto">
+        <div class="text-center mb-16">
+            <span
+              class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4"
+            >Frequently asked questions</span
+            >
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-6 text-text-light">
+            Answers to common questions
+          </h2>
+          <p class="text-xl text-text-light/80 max-w-3xl mx-auto">
+            If you still have doubts, you can always contact us directly by email.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-6">
+          <details class="p-6 border border-gray-light rounded-xl shadow-sm group">
+            <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+              <span>What is KulinaryAI?</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-primary group-open:rotate-180 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-text-light/80">
+              KulinaryAI is an AI-powered cooking assistant that helps you generate recipes, plan meals and create smart
+              grocery lists based on your preferences and goals.
+            </p>
+          </details>
+
+          <details class="p-6 border border-gray-light rounded-xl shadow-sm group">
+            <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+              <span>Do I need to be a good cook to use it?</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-primary group-open:rotate-180 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-text-light/80">
+              Not at all. Recipes can be adjusted to your skill level, from complete beginner to experienced home cook.
+            </p>
+          </details>
+
+          <details class="p-6 border border-gray-light rounded-xl shadow-sm group">
+            <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+              <span>Can I use it with dietary restrictions?</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-primary group-open:rotate-180 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-text-light/80">
+              Yes. You can set preferences like vegetarian, high-protein, dairy-free, and more so recipes adapt to your
+              needs.
+            </p>
+          </details>
+
+          <details class="p-6 border border-gray-light rounded-xl shadow-sm group">
+            <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+              <span>Will there be a mobile app?</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-primary group-open:rotate-180 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-text-light/80">
+              KulinaryAI is currently available on the web. A dedicated mobile experience is planned for future releases.
+            </p>
+          </details>
+
+          <details class="p-6 border border-gray-light rounded-xl shadow-sm group">
+            <summary class="font-bold text-lg cursor-pointer flex justify-between items-center">
+              <span>How can I contact support?</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-primary group-open:rotate-180 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-text-light/80">
+              You can reach us at <strong>supportkulinaryai.com</strong>. We’ll be happy to help.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section
+      id="get-started"
+      class="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-r from-primary to-primary-dark flex justify-center relative overflow-hidden text-white"
+    >
+      <div class="container px-4 md:px-6 mx-auto relative z-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div class="md:w-1/2 space-y-6 text-center md:text-left">
+              <span class="inline-block px-4 py-1 rounded-full bg-white/10 font-medium text-sm mb-2"
+              >Start using KulinaryAI</span
+              >
+            <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              Ready to make cooking easier?
+            </h2>
+            <p class="text-xl max-w-xl text-white/90">
+              Join early users who are planning their meals with AI, saving money on groceries and eating better with less
+              effort.
+            </p>
+            <ul class="space-y-3 text-white/90">
+              <li class="flex items-center justify-center md:justify-start">
+                <svg
+                  class="h-6 w-6 mr-2 text-accent"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Free trial period available</span>
+              </li>
+              <li class="flex items-center justify-center md:justify-start">
+                <svg
+                  class="h-6 w-6 mr-2 text-accent"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>No long-term commitment</span>
+              </li>
+              <li class="flex items-center justify-center md:justify-start">
+                <svg
+                  class="h-6 w-6 mr-2 text-accent"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Cancel anytime</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="md:w-1/2 w-full max-w-md bg-white/10 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-white/20"
+          >
+            <h3 class="text-2xl font-bold mb-6 text-center">Get early access</h3>
+            <p class="text-sm text-white/80 mb-4 text-center">
+              KulinaryAI is in an early access phase. Leave your email and we’ll notify you when new features launch.
+            </p>
+            <!-- Static, non-functional form -->
+            <form class="space-y-4">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="w-full px-4 py-3 rounded-lg bg-white/90 text-gray-900 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-accent"
+                disabled
+              />
+              <button
+                type="button"
+                class="w-full py-3 px-6 rounded-lg bg-accent text-white font-bold opacity-70 cursor-not-allowed"
+              >
+                Coming soon
+              </button>
+              <p class="text-xs text-white/60 text-center">
+                This is a static preview page for demonstration and verification purposes.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simple Pricing Preview (static text only) -->
+    <section class="w-full py-16 md:py-24 lg:py-32 bg-gray-light flex justify-center">
+      <div class="container px-4 md:px-6 mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl text-text-light mb-4">
+            Pricing (subject to change)
+          </h2>
+          <p class="text-text-light/80 max-w-2xl mx-auto">
+            KulinaryAI is still under development. The following tiers are an initial idea and may be adjusted before the
+            official launch.
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Free -->
+          <div class="bg-white rounded-2xl shadow-md p-8 border border-gray-light">
+            <h3 class="text-xl font-bold mb-2 text-text-light">Free</h3>
+            <p class="text-3xl font-extrabold mb-4 text-text-light">$0</p>
+            <p class="text-sm text-text-light/80 mb-6">Perfect to try the platform with limited usage.</p>
+            <ul class="space-y-2 text-sm text-text-light/80">
+              <li>• Limited number of recipes per month</li>
+              <li>• Basic grocery lists</li>
+              <li>• Limited nutritional details</li>
+            </ul>
+          </div>
+
+          <!-- Pro -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-accent relative">
+              <span
+                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full"
+              >
+                Planned main tier
+              </span>
+            <h3 class="text-xl font-bold mb-2 text-text-light">Pro</h3>
+            <p class="text-3xl font-extrabold mb-4 text-text-light">$X.XX / month</p>
+            <p class="text-sm text-text-light/80 mb-6">
+              Full access to AI recipes, meal planning and smart grocery lists.
+            </p>
+            <ul class="space-y-2 text-sm text-text-light/80">
+              <li>• Unlimited recipe generation (fair use)</li>
+              <li>• Advanced grocery list tools</li>
+              <li>• Full nutritional insights</li>
+              <li>• Priority improvements based on feedback</li>
+            </ul>
+          </div>
+
+          <!-- Future tier -->
+          <div class="bg-white rounded-2xl shadow-md p-8 border border-gray-light">
+            <h3 class="text-xl font-bold mb-2 text-text-light">Family / Teams</h3>
+            <p class="text-3xl font-extrabold mb-4 text-text-light">TBD</p>
+            <p class="text-sm text-text-light/80 mb-6">
+              Planned tier for families, roommates or small groups planning meals together.
+            </p>
+            <ul class="space-y-2 text-sm text-text-light/80">
+              <li>• Shared grocery lists</li>
+              <li>• Multiple profiles</li>
+              <li>• Collaborative planning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information and Support Section -->
+    <section class="w-full py-16 md:py-24 lg:py-32 bg-gray-light flex justify-center">
+      <div class="container px-4 md:px-6 mx-auto">
+        <div class="text-center mb-16">
+            <span
+              class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4"
+            >Contact</span
+            >
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-6 text-text-light">
+            Need to reach us?
+          </h2>
+          <p class="text-xl text-text-light/80 max-w-3xl mx-auto">
+            For support, questions or business inquiries about KulinaryAI, contact us via email.
+          </p>
+        </div>
+
+        <div class="grid gap-10 md:grid-cols-2">
+          <!-- Contact Information -->
+          <div class="space-y-8">
+            <div class="bg-white p-8 rounded-xl shadow-md">
+              <h3 class="text-2xl font-bold mb-6 text-text-light">Contact information</h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="bg-primary/10 p-3 rounded-full mr-4">
+                    <span class="text-primary text-xl">✉️</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold mb-1 text-text-light">Email</h4>
+                    <p class="text-text-light/80">supportkulinaryai.com</p>
+                    <p class="text-text-light/80">infokulinaryai.com</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h4 class="font-bold mb-4 text-text-light">Follow us (coming soon)</h4>
+                <div class="flex space-x-4">
+                    <span
+                      class="bg-primary/10 p-3 rounded-full text-primary cursor-default"
+                      title="Social profiles coming soon"
+                    >
+                      <!-- X / Twitter icon -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="h-5 w-5"
+                      >
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                      </svg>
+                    </span>
+                  <span
+                    class="bg-primary/10 p-3 rounded-full text-primary cursor-default"
+                    title="Social profiles coming soon"
+                  >
+                      <!-- Instagram icon -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="h-5 w-5"
+                      >
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                      </svg>
+                    </span>
+                </div>
+              </div>
+
+              <p class="mt-6 text-xs text-text-light/70">
+                This website is a preview of the KulinaryAI platform and may change as the product evolves.
+              </p>
+            </div>
+          </div>
+
+          <!-- Empty right column to keep layout simple on static page -->
+          <div class="hidden md:block"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="w-full py-6 bg-primary-dark text-center text-sm text-white/60">
+  © <span id="year"></span> KulinaryAI. All rights reserved.
+</footer>
+
+<script>
+  // purely cosmetic: set current year in footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
